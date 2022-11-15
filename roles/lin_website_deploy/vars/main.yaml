@@ -1,0 +1,3 @@
+---
+www_path: /opt/www
+public_fqdn: centric-ansible-lab-lin-00.westeurope.cloudapp.azure.com

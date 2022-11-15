@@ -1,0 +1,13 @@
+---
+- name: Ensure groups are created
+  ansible.windows.win_group:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ new_groups }}"
+
+- name: Ensure users are created
+  ansible.windows.win_user:
+    name: "{{ item }}"
+    state: present
+    groups: "{{ new_groups }}"
+  loop: "{{ new_users }}"

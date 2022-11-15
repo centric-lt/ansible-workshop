@@ -1,0 +1,20 @@
+---
+- name: create website path
+  ansible.windows.win_file:
+    path: "{{ www_path }}"
+    state: directory
+
+- name: create index
+  ansible.windows.win_template:
+    src: index.html.j2
+    dest: "{{ www_path }}\\index.html"
+
+- name: create new website
+  community.windows.win_iis_website:
+    name: mywebsite
+    state: started
+    port: 80
+    ip: "*"
+    hostname: "*"
+    application_pool: DefaultAppPool
+    physical_path: "{{ www_path }}"

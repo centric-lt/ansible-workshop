@@ -1,0 +1,8 @@
+---
+- name: My Playbook
+  hosts: linux
+  become: yes
+  roles:
+    - lin_user_setup
+    - lin_nginx_setup
+    - lin_website_deploy

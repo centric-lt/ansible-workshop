@@ -1,0 +1,16 @@
+---
+- name: Ensure path for website exists
+  ansible.builtin.file:
+    path: "{{ www_path }}"
+    state: directory
+
+- name: Template index.html
+  ansible.builtin.template:
+    src: index.html.j2
+    dest: "{{ www_path }}/index.html"
+
+- name: create config
+  ansible.builtin.template:
+    src: mywebsite.j2
+    dest: /etc/nginx/sites-enabled/mywebsite
+  notify: Restart nginx

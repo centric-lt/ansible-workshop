@@ -1,0 +1,8 @@
+server {
+  listen 80;
+
+  server_name {{ ansible_hostname }} {{ public_fqdn }};
+  location / {
+    root {{ www_path }};
+  }
+}

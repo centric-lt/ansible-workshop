@@ -1,0 +1,10 @@
+---
+new_groups:
+  - testgroup1
+  - testgroup2
+  - testgroup3
+
+new_users:
+  - newuser1
+  - newuser2
+  - newuser3

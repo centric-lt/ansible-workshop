@@ -1,0 +1,8 @@
+---
+- name: My Playbook
+  hosts: windows
+  roles:
+    - win_user_setup
+    - win_firefox_setup
+    - win_iis_setup
+    - win_website_deploy
