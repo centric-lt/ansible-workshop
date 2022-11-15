@@ -166,6 +166,7 @@ server {
 <details>
 <summary>Testing website</summary>
 From management node run
+
 ```console
 curl lab-lin-xx
 ```
@@ -293,6 +294,7 @@ ansible_winrm_server_cert_validation=ignore
 <details>
 <summary>Testing website</summary>
 From management node run
+
 ```console
 curl lab-win-xx
 ```
